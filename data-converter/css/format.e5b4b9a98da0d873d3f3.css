@@ -1,0 +1,397 @@
+.AriaMenuButton {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .AriaMenuButton-trigger {
+    cursor: pointer;
+    display: inline-block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #EEE;
+    background-image: linear-gradient(#FCFCFC, #EEE);
+    border: 1px solid #D5D5D5;
+    border-radius: 3px;
+    font-weight: bold;
+    padding: 6px 10px;
+  }
+  
+  .AriaMenuButton-trigger::after {
+    content: "";
+    display: inline-block;
+    margin-left: 3px;
+    position: relative;
+    top: 3px;
+    border-color: currentColor transparent transparent;
+    border-width: 5px 4px;
+    border-style: solid;
+  }
+  
+  .AriaMenuButton-trigger:hover,
+  .AriaMenuButton-trigger:focus,
+  .AriaMenuButton-trigger.is-open {
+    background-color: #DDD;
+    background-image: linear-gradient(#EEE, #DDD);
+    border-color: #CCC;
+  }
+  
+  .AriaMenuButton-trigger:active,
+  .AriaMenuButton-trigger.is-open {
+    background-color: #DCDCDC;
+    background-image: none;
+    border-color: #B5B5B5;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+  }
+  
+  .AriaMenuButton-menu {
+    background: #fff;
+    border: 1px solid rgba(200, 200, 200, 0.4);
+    list-style-type: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 99;
+    padding-left: 0;
+    border-radius: 3px;
+    margin: 4px 0 0 0;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+    width: 225px;
+  }
+  
+  .AriaMenuButton-menu--flushRight {
+    right: 0;
+  }
+  
+  .AriaMenuButton-menuItem {
+    cursor: pointer;
+    padding: 6px;
+    border-bottom: 1px solid #EEE;
+  }
+  
+  .AriaMenuButton-menuItemWrapper:first-of-type .AriaMenuButton-menuItem {
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+  }
+  
+  .AriaMenuButton-menuItemWrapper:last-of-type .AriaMenuButton-menuItem {
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+  
+  .AriaMenuButton-menuItem:hover,
+  .AriaMenuButton-menuItem:focus {
+    background-color: #4183C4;
+    color: #fff;
+  }
+  
+  .AriaMenuButton-menuItem.is-selected {
+    cursor: default;
+    font-weight: bold;
+  }
+  
+  
+  /* FANCY */
+  
+  .FancyMB {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .FancyMB-trigger {
+    cursor: pointer;
+    display: inline-block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: #fff;
+    color: #000;
+    border: 1px solid #868686;
+    border-radius: 6px;
+    padding: 0.88889rem 1.77778rem 0.94444rem 1.77778rem;
+    transition: background-color 300ms ease-out;
+  }
+  
+  .FancyMB-trigger:hover,
+  .FancyMB-trigger:focus {
+    background: #C9F1FF;
+  }
+  
+  .FancyMB-trigger::after {
+    content: "";
+    display: inline-block;
+    margin-left: 20px;
+    position: relative;
+    top: 3px;
+    border-color: currentColor transparent transparent;
+    border-width: 5px 5px;
+    border-style: solid;
+  }
+  
+  .FancyMB-menu {
+    background: #fff;
+    border: 1px solid #ccc;
+    list-style-type: none;
+    padding-left: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 99;
+    margin: 2px 0 0 0;
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .FancyMB-menu::before {
+    border: inset 6px;
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #FFF rgba(0, 0, 0, 0);
+    border-bottom-style: solid;
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    z-index: 89;
+  }
+  
+  .FancyMB-menu::after {
+    border: inset 7px;
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #ccc rgba(0, 0, 0, 0);
+    border-bottom-style: solid;
+    position: absolute;
+    top: -14px;
+    left: 9px;
+    z-index: 88;
+  }
+  
+  .FancyMB-menuItem {
+    cursor: pointer;
+    color: #555;
+    padding: 0.5rem;
+  }
+  
+  .FancyMB-menuItem:hover,
+  .FancyMB-menuItem:focus {
+    background: #EEE;
+  }
+  
+  .FancyMB-menuItem.is-selected {
+    cursor: default;
+    font-weight: bold;
+  }
+  
+  .FancyMB-menu {
+    width: 250px;
+    max-width: 250px;
+  }
+  
+  .FancyMB-menuItem::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  
+  .FancyMB-svg {
+    float: left;
+    width: 50px;
+    margin-top: 2px;
+  }
+  
+  .FancyMB-text {
+    display: block;
+    float: left;
+    margin: 0 5px;
+  }
+  
+  .FancyMB-keyword {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .FancyMB-triggerIcon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+  
+  .FancyMB-triggerText {
+    display: inline-block;
+    line-height: 1;
+    vertical-align: middle;
+  }
+  
+  .FancyMB-triggerSmallText {
+    font-size: 10px;
+    font-weight: normal;
+  }
+  
+  .FancyMB-selectedText {
+    margin-top: 1em;
+  }
+  
+  /* transition */
+  
+  .FancyMB-menu {
+    -webkit-transform-origin: 10px 0;
+    transform-origin: 10px 0;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: -webkit-transform 0.2s cubic-bezier(.55,0,.1,1);
+    transition: transform 0.2s cubic-bezier(.55,0,.1,1);
+  }
+  
+  /* cf. https://github.com/facebook/react/issues/2227 */
+  .FancyMB-menu.is-enter-active,
+  .FancyMB-menu.is-leave-active {
+    -webkit-transition: -webkit-transform 0.2s cubic-bezier(.55,0,.1,1);
+    transition: transform 0.2s cubic-bezier(.55,0,.1,1);
+  }
+  
+  .FancyMB-menu.is-enter,
+  .FancyMB-menu.is-leave.is-leave-active {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  
+  .FancyMB-menu.is-enter.is-enter-active,
+  .FancyMB-menu.is-leave {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  .radio-group {
+    display: inline-block; }
+    .radio-group label {
+      cursor: pointer; }
+  
+  .radio-group.theme-default label {
+    margin: 0.5em; }
+  
+  .radio-group.theme-button-group label {
+    padding: 0.3em 1em;
+    background-color: #FFF;
+    color: #333;
+    border: 1px solid #CCC; }
+  
+  .radio-group.theme-button-group label.checked {
+    color: #FFF;
+    background-color: #2DB7F5;
+    border-color: #2DB7F5; }
+  
+  .radio-group.theme-button-group input {
+    opacity: 0;
+    width: 0;
+    height: 0; }
+  
+  .radio-group.theme-button-group label.disabled {
+    color: #ccc;
+    background-color: #fff;
+    border-color: #ccc;
+    cursor: not-allowed; }
+  body {
+    font-family: "source-serif-pro",Georgia,"Times New Roman",Times,serif;
+    color: #3a87ad; }
+  
+  h1, p {
+    text-align: center; }
+  
+  h1.logo {
+    font-family: "Short Stack", "Comic Sans MS", cursive, sans-serif; }
+  
+  img {
+    max-height: 480px; }
+  
+  a {
+    text-decoration: underline;
+    cursor: pointer;
+    color: blue; }
+  
+  .block-container {
+    padding-bottom: 8px;
+    font-family: monospace;
+    font-size: 14px; }
+    .block-container textarea {
+      width: 100%; }
+  
+  .data-block {
+    position: relative; }
+    .data-block table {
+      margin-top: 0; }
+    .data-block td {
+      border: 1px solid #ccc;
+      text-align: center;
+      width: 18px; }
+    .data-block .toobar {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0 6px;
+      text-align: right;
+      color: #fff;
+      background-color: #6c99bd;
+      display: none; }
+    .data-block .toobar a {
+      color: #fff;
+      margin: 0 4px; }
+  
+  .data-block:hover .toobar {
+    display: block; }
+  
+  .data-block + .CoderSelector {
+    margin-top: 8px; }
+  
+  .error-block {
+    border: 1px solid #ccc;
+    padding: 10px;
+    color: #f00;
+    font-family: monospace;
+    font-size: 14px; }
+  
+  .menu-space {
+    height: 400px; }
+  
+  .AriaMenuButton {
+    margin-right: 10px; }
+  
+  .CoderSelector {
+    margin-top: 2px; }
+    .CoderSelector label {
+      margin-right: 10px; }
+  
+  input[type=checkbox] {
+    position: relative;
+    top: 1.5px; }
+  
+  /*
+       FILE ARCHIVED ON 19:39:06 Aug 15, 2020 AND RETRIEVED FROM THE
+       INTERNET ARCHIVE ON 16:23:28 Oct 18, 2020.
+       JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+  
+       ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+       SECTION 108(a)(3)).
+  */
+  /*
+  playback timings (ms):
+    RedisCDXSource: 14.904
+    load_resource: 274.701
+    exclusion.robots.policy: 0.171
+    CDXLines.iter: 25.396 (3)
+    LoadShardBlock: 159.161 (3)
+    captures_list: 206.25
+    PetaboxLoader3.resolve: 151.338
+    PetaboxLoader3.datanode: 170.295 (4)
+    esindex: 0.029
+    exclusion.robots: 0.184
+  */
